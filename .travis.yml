@@ -6,6 +6,9 @@ cache:
   directories:
     - ci/alpine/.cache/
 
+before_cache:
+    - ./ci/alpine/clean-cache.sh
+
 matrix:
   fast_finish: true
   include:
